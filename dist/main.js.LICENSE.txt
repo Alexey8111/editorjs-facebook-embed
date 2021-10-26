@@ -1,5 +1,5 @@
 /**
- * YouTube embed plugin for Editor.js.
+ * Facebook embed plugin for Editor.js.
  *
  * @author Tei Yuan Wei
  * @license MIT License (MIT)

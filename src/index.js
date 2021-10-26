@@ -2,7 +2,7 @@ import "./main.css";
 import ToolboxIcon from "./svg/toolbox.svg";
 import { debounce } from "debounce";
 
-export default class YoutubeEmbed {
+export default class FacebookEmbed {
   /**
    *
    * Get toolbox settings
@@ -75,13 +75,13 @@ export default class YoutubeEmbed {
 
   /**
    *
-   * Create iframe for YouTube embed
+   * Create iframe for Facebook embed
    * @private
    * @param {string} url
    *
    */
   _createIframe(url) {
-    console.log('test url', url);
+    console.log("test url", url);
     const videoId = url;
     if (videoId == null) {
       if (this.isEdited) {
