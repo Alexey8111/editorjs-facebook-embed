@@ -1,12 +1,3 @@
-/**
- * YouTube embed plugin for Editor.js.
- *
- * @author Tei Yuan Wei
- * @license MIT License (MIT)
- * @version 1.0.3
- *
- */
-
 import "./main.css";
 import ToolboxIcon from "./svg/toolbox.svg";
 import { debounce } from "debounce";
@@ -136,7 +127,7 @@ export default class YoutubeEmbed {
   save(blockContent) {
     const caption = blockContent.querySelector(`.${this.CSS.caption}`);
     return {
-      service: "youtube",
+      service: "facebook",
       embed: this.embed,
       source: this.source,
       caption: caption ? caption.innerHTML : "",

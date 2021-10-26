@@ -11,12 +11,7 @@
     "editor.js",
     "editorjs"
   ],
-  "author": "Tei Yuan Wei",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yuanwei92/editorjs-youtube-embed"
-  },
   "babel": {
     "presets": [
       "@babel/preset-env"
