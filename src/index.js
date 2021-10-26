@@ -92,7 +92,7 @@ export default class FacebookEmbed {
       return;
     }
 
-    const embedUrl = `https://www.facebook.com/plugins/post.php?href=https://www.facebook.com/${id(
+    const embedUrl = `https://www.facebook.com/plugins/post.php?href=${id(
       videoId
     )}`;
     this.wrapper.innerHTML = null;
