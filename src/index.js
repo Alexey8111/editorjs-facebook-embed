@@ -81,6 +81,7 @@ export default class YoutubeEmbed {
    *
    */
   _createIframe(url) {
+    console.log('test url', url);
     const videoId = url;
     if (videoId == null) {
       if (this.isEdited) {
@@ -94,7 +95,7 @@ export default class YoutubeEmbed {
     plyrContainer.classList.add("video-wrapper");
 
     const iframe = document.createElement("iframe");
-    this.embed = `https://www.facebook.com/plugins/post.php?href=https://www.facebook.com/${videoId}`;
+    this.embed = `https://www.facebook.com/plugins/post.php?href=${videoId}`;
     iframe.setAttribute("src", this.embed);
     iframe.setAttribute("allowfullscreen", true);
 
