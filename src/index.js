@@ -82,9 +82,8 @@ export default class FacebookEmbed {
    */
   _createIframe(url) {
     // const videoId = url.length ? url : null
-    const videoId = /https?:\/\/www.facebook.com\/([^\/\?\&]*)\/(.*)/
-      .exec(url)
-      .slice(1);
+    const regex = /https?:\/\/www.facebook.com\/([^\/\?\&]*)\/(.*)/;
+    const videoId = regex.exec(url) ? regex.exec(url).slice(1) : null;
 
     console.log("test videoId", videoId);
     if (videoId == null) {
