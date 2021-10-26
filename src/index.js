@@ -81,14 +81,10 @@ export default class FacebookEmbed {
    *
    */
   _createIframe(url) {
-    // const videoId = url.length ? url : null
-    const id = (ids) => ids.shift()
+    const id = (ids) => ids.shift();
     const regex = /https?:\/\/www.facebook.com\/([^\/\?\&]*)\/(.*)/;
     const videoId = regex.exec(url);
 
-    const embedUrl = `https://www.facebook.com/plugins/post.php?href=https://www.facebook.com/${id(videoId)}`;
-
-    console.log("test videoId", id(videoId));
     if (!videoId) {
       if (this.isEdited) {
         this.wrapper.querySelector("input").classList.add("invalid");
@@ -96,6 +92,9 @@ export default class FacebookEmbed {
       return;
     }
 
+    const embedUrl = `https://www.facebook.com/plugins/post.php?href=https://www.facebook.com/${id(
+      videoId
+    )}`;
     this.wrapper.innerHTML = null;
     const plyrContainer = document.createElement("div");
     plyrContainer.classList.add("video-wrapper");
