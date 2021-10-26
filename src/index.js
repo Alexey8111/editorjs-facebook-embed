@@ -86,7 +86,9 @@ export default class FacebookEmbed {
     const regex = /https?:\/\/www.facebook.com\/([^\/\?\&]*)\/(.*)/;
     const videoId = regex.exec(url);
 
-    console.log("test videoId", videoId);
+    const embedUrl = `https://www.facebook.com/plugins/post.php?href=https://www.facebook.com/${id(videoId)}`;
+
+    console.log("test videoId", id(videoId));
     if (!videoId) {
       if (this.isEdited) {
         this.wrapper.querySelector("input").classList.add("invalid");
@@ -99,7 +101,7 @@ export default class FacebookEmbed {
     plyrContainer.classList.add("video-wrapper");
 
     const iframe = document.createElement("iframe");
-    this.embed = `https://www.facebook.com/plugins/post.php?href=${id(videoId)}`;
+    this.embed = embedUrl;
     iframe.setAttribute("src", this.embed);
     iframe.setAttribute("allowfullscreen", true);
 
