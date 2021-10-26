@@ -97,7 +97,7 @@ export default class FacebookEmbed {
     )}`;
     this.wrapper.innerHTML = null;
     const plyrContainer = document.createElement("div");
-    plyrContainer.classList.add("video-wrapper");
+    plyrContainer.classList.add("facebook-wrapper");
 
     const iframe = document.createElement("iframe");
     this.embed = embedUrl;
